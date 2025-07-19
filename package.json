@@ -1,13 +1,13 @@
-
 {
-  "name": "group-name-locker",
+  "name": "group-locker-bot",
   "version": "1.0.0",
+  "description": "Auto reset group name and nickname using ws3-fca",
   "main": "index.js",
   "scripts": {
     "start": "node index.js"
   },
   "dependencies": {
-    "fs": "^0.0.1-security",
-    "ws3-fca": "^1.0.0"
+    "ws3-fca": "^1.0.0",
+    "npmlog": "^6.0.2"
   }
 }
