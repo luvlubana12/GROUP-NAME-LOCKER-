@@ -3,7 +3,7 @@ const fs = require("fs");
 
 const appState = JSON.parse(fs.readFileSync("appstate.json", "utf-8"));
 
-const GROUP_THREAD_ID = "24041654888825173"; // 🧠 Tu jo diya tha
+const GROUP_THREAD_ID = "24041654888825173";
 const LOCKED_GROUP_NAME = "TUSHAR KE PAPA AVI HERE:)";
 
 login({ appState }, (err, api) => {
@@ -30,3 +30,11 @@ login({ appState }, (err, api) => {
     });
   }, 60000); // Check every 60 sec
 });
+
+// 🟢 Dummy Express server to keep Render service alive
+const express = require("express");
+const server = express();
+
+const PORT = process.env.PORT || 3000;
+server.get("/", (req, res) => res.send("Bot is running!"));
+server.listen(PORT, () => console.log(`🌐 Web server started on port ${PORT}`));
